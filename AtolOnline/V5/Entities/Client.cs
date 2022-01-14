@@ -3,12 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AtolOnline.V5.Entities
 {
-    public class Customer
+    public class Client
     {
         /// <summary>
         /// Электронный адрес покупателя
         /// </summary>
         [JsonProperty("email")]
+        [EmailAddress]
         [StringLength(maximumLength: 64)]
         public string Email { get; set; }
 
