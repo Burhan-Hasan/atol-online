@@ -60,9 +60,8 @@ namespace AtolOnline.V5.Entities
         [Required]
         public decimal Sum { get; set; }
 
-
         /// <summary>
-        /// <para>Признак способа расчёта. Возможные значения:</para>
+        /// <para>Признак способа расчёта.</para>
         /// <para>Enum -> PaymentMethods</para>
         /// </summary>
         [JsonProperty("payment_method")]
@@ -71,10 +70,20 @@ namespace AtolOnline.V5.Entities
 
         /// <summary>
         /// <para>Признак предмета расчёта:</para>
-        /// <para>Enum -> PaymentMethods</para>
+        /// <para>
+        /// 1 - о реализуемом товаре, за исключением подакцизного товара и товара, подлежащего маркировке 
+        /// средствами идентификации (наименование и иные сведения, описывающие товар)
+        /// </para>
+        /// <para>
+        /// 2 - о реализуемом подакцизном товаре, за исключением товара, 
+        /// подлежащего маркировке средствами идентификации 
+        /// (наименование и иные сведения, описывающие товар)
+        /// </para>
+        /// <br />
+        /// Стр 27 <see href="https://online.atol.ru/files/API_atol_online_v5.pdf" />
         /// </summary>
         [JsonProperty("payment_object")]
         [Required]
-        public PaymentObjects PaymentObject { get; set; }
+        public int PaymentObject { get; set; }
     }
 }
