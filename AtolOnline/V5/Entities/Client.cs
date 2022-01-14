@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AtolOnline.V5.Entities
@@ -43,5 +44,12 @@ namespace AtolOnline.V5.Entities
         [JsonProperty("email")]
         [StringLength(maximumLength: 12)]
         public string INN { get; set; }
+
+
+        /// <summary>
+        /// Дата рождения покупателя (клиента) в формате ДД.ММ.ГГГГ (ровно 10 символов)
+        /// </summary>
+        [JsonProperty("birthdate")]
+        public DateTime Birthdate { get; set; }
     }
 }

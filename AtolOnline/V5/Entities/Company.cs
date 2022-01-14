@@ -1,9 +1,5 @@
-﻿using AtolOnline.V5.Enums;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace AtolOnline.V5.Entities
 {
@@ -24,7 +20,7 @@ namespace AtolOnline.V5.Entities
         /// </summary>
         [Required]
         [JsonProperty("sno")]
-        public SNO SNO { get; set; }
+        public string SNO { get; set; }
 
         /// <summary>
         /// ИНН организации. Используется для предотвращения ошибочных 
