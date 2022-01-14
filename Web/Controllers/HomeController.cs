@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AtolOnline.V5.Client;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
+            var atolClient = new AtolClient(true, "", "");
             return View();
         }
 

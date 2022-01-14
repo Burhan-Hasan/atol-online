@@ -4,8 +4,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
-
   <ItemGroup>
+    <ProjectReference Include="..\AtolOnline\AtolOnline.csproj" />
   </ItemGroup>
 
 </Project>
