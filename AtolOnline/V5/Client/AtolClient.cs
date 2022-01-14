@@ -16,7 +16,7 @@ namespace AtolOnline.V5.Client
         //Логин доступа к API
         string Login => IsTestMode ? TestEnvParamsV5.Login : login;
         //Пароль доступа к API
-        string Password => password;
+        string Password => IsTestMode ? TestEnvParamsV5.Password : password;
         //Токен авторизации
         public string Token { get; set; }
 
