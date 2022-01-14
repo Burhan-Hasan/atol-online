@@ -136,10 +136,27 @@ namespace AtolOnline.V5.Entities
         [JsonProperty("mark_processing_mode")]
         public string MarkProcessingMode { get; set; }
 
-
-
-        //TODO: Not implemented
+        //TODO: Not implemented yet
         [JsonProperty("sectoral_item_props")]
         public List<object> SectoralItemProps { get; set; }
+
+        [JsonProperty("mark_code")]
+        public MarkCode MarkCode { get; set; }
+
+        /// <summary>
+        /// Атрибуты агента.
+        /// </summary>
+        [JsonProperty("agent_info")]
+        //TODO: Not implemented yet
+        public object AgentInfo { get; set; }
+
+
+        /// <summary>
+        /// Атрибуты поставщика.
+        /// Поле обязательно, если передан «agent_info».
+        /// </summary>
+        [JsonProperty("supplier_info")]
+        //TODO: Not implemented yet
+        public object SupplierInfo { get; set; }
     }
 }
