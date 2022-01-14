@@ -22,6 +22,8 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             var atolClient = new AtolClient(true, "", "");
+            var _ = new AtolRequest();
+            
             return View();
         }
 
