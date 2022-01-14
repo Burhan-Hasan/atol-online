@@ -8,31 +8,31 @@
         /// <summary>
         /// общая СН
         /// </summary>
-        public static string OSN = "osn";
+        public static readonly string OSN = "osn";
 
         /// <summary>
         /// упрощенная СН (доходы)
         /// </summary>
-        public static string USN_INCOME = "usn_income";
+        public static readonly string USN_INCOME = "usn_income";
 
         /// <summary>
         /// упрощенная СН (доходы минус расходы)
         /// </summary>
-        public static string USN_INCOME_OUTCOME = "usn_income_outcome";
+        public static readonly string USN_INCOME_OUTCOME = "usn_income_outcome";
 
         /// <summary>
         /// единый налог на вмененный доход
         /// </summary>
-        public static string ENVD = "envd";
+        public static readonly string ENVD = "envd";
 
         /// <summary>
         /// единый сельскохозяйственный налог
         /// </summary>
-        public static string ESN = "esn";
+        public static readonly string ESN = "esn";
 
         /// <summary>
         /// патентная СН
         /// </summary>
-        public static string PATENT = "patent";
+        public static readonly string PATENT = "patent";
     }
 }

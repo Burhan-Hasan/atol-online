@@ -1,4 +1,5 @@
 ﻿using AtolOnline.V5.Client;
+using AtolOnline.V5.Entities;
 using AtolOnline.V5.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -24,7 +25,7 @@ namespace Web.Controllers
         {
             var atolClient = new AtolClient(true, "", "");
             var _ = new AtolReceiptRequest();
-            SNO.
+            new Client().do
             return View();
         }
 
