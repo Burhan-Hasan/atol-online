@@ -85,5 +85,12 @@ namespace AtolOnline.V5.Entities
         [JsonProperty("payment_object")]
         [Required]
         public int PaymentObject { get; set; }
+
+        /// <summary>
+        /// Атрибуты налога на позицию.
+        /// </summary>
+        [JsonProperty("vat")]
+        [Required]
+        public Vat Vat { get; set; }
     }
 }

@@ -23,9 +23,7 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            var atolClient = new AtolClient(true, "", "");
-            var _ = new AtolReceiptRequest();
-            new Item().Sum
+            new Item();
             return View();
         }
 
