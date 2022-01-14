@@ -1,5 +1,6 @@
 ﻿using AtolOnline.V5.Enums;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AtolOnline.V5.Entities
@@ -123,6 +124,22 @@ namespace AtolOnline.V5.Entities
         [StringLength(maximumLength: 32)]
         public string DeclarationNumber { get; set; }
 
+        /// <summary>
+        /// Реквизит «дробное количество маркированного товара»
+        /// </summary>
         public MarkQuantity MarkQuantity { get; set; }
+
+        /// <summary>
+        /// Включается в чек в случае, если предметом расчета является товар, 
+        /// подлежащий обязательной маркировке средством идентификации. Должен принимать значение равное «0»
+        /// </summary>
+        [JsonProperty("mark_processing_mode")]
+        public string MarkProcessingMode { get; set; }
+
+
+
+        //TODO: Not implemented
+        [JsonProperty("sectoral_item_props")]
+        public List<object> SectoralItemProps { get; set; }
     }
 }
