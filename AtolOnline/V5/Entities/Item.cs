@@ -89,8 +89,40 @@ namespace AtolOnline.V5.Entities
         /// <summary>
         /// Атрибуты налога на позицию.
         /// </summary>
-        [JsonProperty("vat")]
         [Required]
         public Vat Vat { get; set; }
+
+        /// <summary>
+        /// Дополнительный реквизит предмета расчета.
+        /// </summary>
+        [JsonProperty("user_data")]
+        [StringLength(maximumLength: 64)]
+        public string UserData { get; set; }
+
+        /// <summary>
+        /// Сумма акциза в рублях<br />
+        /// целая часть не более 8 знаков<br />
+        /// дробная часть не более 2 знаков<br />
+        /// значение не может быть отрицательным
+        /// </summary>
+        [JsonProperty("excise")]
+        public decimal Excise { get; set; }
+
+        /// <summary>
+        /// Цифровой код страны происхождения товара ровно 3 цифры
+        /// Код страны указывается в соответствии с Общероссийским классификатором стран мира ОКСМ. 
+        /// </summary>
+        [JsonProperty("country_code")]
+        public string CountryCode { get; set; }
+
+
+        /// <summary>
+        /// Номер таможенной декларации
+        /// </summary>
+        [JsonProperty("declaration_number")]
+        [StringLength(maximumLength: 32)]
+        public string DeclarationNumber { get; set; }
+
+        public MarkQuantity MarkQuantity { get; set; }
     }
 }
