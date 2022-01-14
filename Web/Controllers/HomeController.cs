@@ -1,4 +1,5 @@
 ﻿using AtolOnline.V5.Client;
+using AtolOnline.V5.Enums;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -22,8 +23,8 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             var atolClient = new AtolClient(true, "", "");
-            var _ = new AtolRequest();
-            
+            var _ = new AtolReceiptRequest();
+            SNO.
             return View();
         }
 
