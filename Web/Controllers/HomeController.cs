@@ -25,7 +25,7 @@ namespace Web.Controllers
         {
             var atolClient = new AtolClient(true, "", "");
             var _ = new AtolReceiptRequest();
-            new Client().do
+            new Item().Sum
             return View();
         }
 

@@ -33,7 +33,7 @@ namespace AtolOnline.V5.Entities
         /// <summary>
         /// Наименование покупателя (клиента).
         /// </summary>
-        [JsonProperty("email")]
+        [JsonProperty("name")]
         [StringLength(maximumLength: 256)]
         public string Name { get; set; }
 
@@ -41,7 +41,7 @@ namespace AtolOnline.V5.Entities
         /// <summary>
         /// ИНН покупателя (клиента).
         /// </summary>
-        [JsonProperty("email")]
+        [JsonProperty("inn")]
         [StringLength(maximumLength: 12)]
         public string INN { get; set; }
 
