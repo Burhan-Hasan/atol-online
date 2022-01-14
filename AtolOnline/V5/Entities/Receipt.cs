@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AtolOnline.V5.Entities
 {
@@ -9,5 +6,8 @@ namespace AtolOnline.V5.Entities
     {
         [JsonProperty("client")]
         public Client Client { get; set; }
+
+        [JsonProperty("company")]
+        public Company Company { get; set; }
     }
 }
